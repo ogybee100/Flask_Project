@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            margin: 20px;
+            color: #666;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Home Page</h1>
+    {% if username %}
+        <p>Hello,{{username}}! You are already logged in.</p>
+        <a href="/logout">logout</a>
+    {% else %}
+        <p>You are not logged in .Please <a href="home.html">Login</a>to access the home page.</p>
+    {% endif %}
+</body>
+</html>
